@@ -16,4 +16,11 @@ public class AnagramTest {
         boolean result = anagram.isAnagram("ab", "abc");
         assertEquals(false, result);
     }
+
+    @Test
+    public void whenAnagramIsPassedTwoStringsThatAreAnagramsItReturnsTrue() {
+        Anagram anagram = new Anagram();
+        boolean result = anagram.isAnagram("abcde", "cbeda");
+        assertEquals(true, result);
+    }
 }

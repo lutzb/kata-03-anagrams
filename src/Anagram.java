@@ -8,7 +8,25 @@ public class Anagram {
         }
         if (s1.length() != s2.length()) {
             return false;
+        } else {
+            for (int i = 0; i < s1.length(); i++) {
+                char s1Char = s1.charAt(i);
+
+                boolean charExistsInS2 = false;
+                for (int j = 0; j < s2.length(); j++) {
+                    char s2Char = s2.charAt(j);
+
+                    if (s1Char == s2Char) {
+                        charExistsInS2 = true;
+                    }
+                }
+
+                if (!charExistsInS2) {
+                    return false;
+                }
+            }
         }
-        return false;
+
+        return true;
     }
 }
